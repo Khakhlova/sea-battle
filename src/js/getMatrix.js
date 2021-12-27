@@ -8,6 +8,5 @@ export default function getMatrix() {
         matrix[i][j] = 0;
       }
     }
-    console.log(matrix);
     return matrix;
   }

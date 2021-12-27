@@ -1,3 +1,5 @@
+import fieldClick from "./fieldClick";
+
 export default function printField(field, tableId, show, user) {
     let table = document.getElementById(tableId);
     for (let i = 0; i < 10; i++) {
@@ -8,18 +10,28 @@ export default function printField(field, tableId, show, user) {
       for (let j = 0; j < 10; j++) {
         let cell = row.insertCell(-1);
         cell.id = user + '-' + i + '-' + j;
+       
         if (show === true) {
-          if (field[i][j] == 1) {
-            cell.className = 'ship';
+            if (field[i][j] == 1) {
+              cell.className = 'ship';
+            } else if (field[i][j] == 2) {
+              cell.className = 'miss';
+            } else if (field[i][j] == 3) {
+              cell.className = 'hit';
+            } else {
+              cell.innerHTML = '<a></a>';
+            }
           } else {
-            cell.innerHTML = '<a></a>';
-          }
-        } else {
-          if (field[i][j] == 2) {
-            cell.className = 'miss';
-          } else {
-          cell.innerHTML =
+            if (field[i][j] == 2) {
+              cell.className = 'miss';
+            } else if (field[i][j] == 3) {
+              cell.className = 'hit';
+            } else {
+              cell.innerHTML =
             `<a class="cell" href="#"> </a>`;  
+             cell.addEventListener('click', (e) => {
+                 fieldClick(e.target, i, j, `'${user}'`);
+             })
           }
         }
       }

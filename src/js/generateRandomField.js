@@ -26,7 +26,6 @@ export default function generateRandomField(ships, userShips) {
               for (let k = 0; k < shipLength; k++) {
                 field[x + k][y] = 1;
                 userShips[shipCounter].push([x + k, y, 0]);
-                console.log(userShips);
               }
               possibleCoord = 1;
             }
@@ -36,7 +35,6 @@ export default function generateRandomField(ships, userShips) {
               for (let l = 0; l < shipLength; l++) {
                 field[x][y + l] = 1;
                 userShips[shipCounter].push([x, y + l, 0]);
-                console.log(userShips);
               }
               possibleCoord = 1;
             }
