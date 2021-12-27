@@ -47,6 +47,11 @@ h2{
   padding: 20px;
 }
 
+.ship {
+    position: relative;
+    background-color: #000;
+  }
+
 .layout-hidden {
   display: none;
   z-index: -1;
