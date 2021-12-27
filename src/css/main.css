@@ -24,6 +24,8 @@ td{
 }
 div#wrapper{
   display: flex;
+  align-self: center;
+  justify-self: center;
   flex-flow: row;
   justify-content: space-between;
   width:  680px;
@@ -99,16 +101,17 @@ a.cell:hover{
     color: white;
     border-radius: 10px;
     outline: none;
-    width: 100px;
+    width: 200px;
   }
 
 
   @media (max-width: 720px) {
 
     div#wrapper{  
-        flex-flow: column;
+        display: flex;
+        flex-flow: column-reverse;
         align-items: center;
         width:  300px;    
-        margin-top: 30px;
+        margin-top: 20px;
     }
   }
