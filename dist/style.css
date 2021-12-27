@@ -1,3 +1,6 @@
+/*!********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/main.css ***!
+  \********************************************************************/
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -51,4 +54,5 @@ h2{
   display: none;
   z-index: -1;
 }
+
 
